@@ -10,6 +10,27 @@
     <link rel="shortcut icon" href="images/favicon/정주호_증명사진_001.jpeg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
+    <style>
+      .pub { display:flex; align-items:center; gap:20px; margin:18px 0; }
+      .pub .thumb { flex:0 0 300px; max-width:300px; }        /* 이미지 폭 고정 */
+      .pub .thumb img{ width:100%; height:auto; object-fit:contain; display:block; }
+      .pub .meta{ flex:1 1 auto; font-size:16px; line-height:1.5; }
+
+      /* 전역 규칙에 눌리는 걸 방지 (단어마다 줄바꿈, 좁은 폭 등) */
+      .pub .meta a, .pub .meta .papertitle{
+        display:inline !important; 
+        max-width:none !important; 
+        white-space:normal !important;
+        word-break:keep-all;        /* 한국어/영어 자연스런 줄바꿈 */
+      }
+      .pub .papertitle{ font-size:20px; font-weight:700; }
+      .pub .links{ margin:4px 0 0; }
+      @media (max-width:700px){
+        .pub{ flex-direction:column; align-items:flex-start; }
+        .pub .thumb{ width:100%; max-width:100%; }
+      }
+    </style>
+    
   </head>
 
   <body>
@@ -68,198 +89,160 @@
             </tr>
           </tbody></table>
           
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
-            <tr>
-              <!-- 이미지 영역 -->
-              <td style="padding:16px; width:35%; vertical-align:middle; text-align:center;">
-                <a href="data/paper/logo-srrg-arxiv-2025.png">
-                  <img style="width:100%; max-width:300px; height:auto; object-fit:contain;" 
-                       alt="paper logo" 
-                       src="data/paper/logo-srrg-arxiv-2025.png">
-                </a>
-              </td>
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-srrg-arxiv-2025.png">
+                <img alt="paper logo" src="data/paper/logo-srrg-arxiv-2025.png">
+              </a>
+            </div>
 
-              <!-- 텍스트 영역 -->
-              <td style="padding:16px; width:65%; vertical-align:middle; font-size:16px; line-height:1.5;">
-                <a href="https://huggingface.co/papers/2510.00428">
-                  <span class="papertitle" style="font-size:18px; font-weight:bold;">
-                    Automated Structured Radiology Report Generation with Rich Clinical Context
-                  </span>
-                </a>
-                <br>
-                <strong>Juho Jung</strong>*, Seongjae Kang*, Dong Bok Lee, Dongseop Kim, Won Hwa Kim, Sunghoon Joo
-                <br>
-                <em>arXiv</em>, 2025
-                <br>
+            <div class="meta">
+              <a href="https://huggingface.co/papers/2510.00428">
+                <span class="papertitle">
+                  Automated Structured Radiology Report Generation with Rich Clinical Context
+                </span>
+              </a><br>
+              <strong>Juho Jung</strong>*, Seongjae Kang*, Dong Bok Lee, Dongseop Kim, Won Hwa Kim, Sunghoon Joo<br>
+              <em>arXiv</em>, 2025
+              <div class="links">
                 <a href="https://huggingface.co/papers/2510.00428">project page</a> /
                 <a href="https://arxiv.org/pdf/2505.24223">arXiv</a> /
                 <a href="data/paper/srrg-arxiv-2025.pdf">paper</a>
-                <p style="margin-top:8px;">
-                  Incorporating clinical context into automated structured radiology report generation 
-                  improves report quality by addressing temporal hallucinations and utilizing comprehensive patient data.
-                </p>
-              </td>
-            </tr>
+              </div>
+              <p style="margin-top:8px">
+                Incorporating clinical context into automated structured radiology report generation improves report
+                quality by addressing temporal hallucinations and utilizing comprehensive patient data.
+              </p>
+            </div>
+          </div>
 
-            <tr>
-              <!-- 이미지 영역 -->
-              <td style="padding:16px; width:35%; vertical-align:middle; text-align:center;">
-                <a href="data/paper/logo-camel-wacv-2025.png">
-                  <img style="width:100%; max-width:300px; height:auto; object-fit:contain;" 
-                       alt="paper logo" 
-                       src="data/paper/logo-camel-wacv-2025.png">
-                </a>
-              </td>
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-camel-wacv-2025.png">
+                <img alt="paper logo" src="data/paper/logo-camel-wacv-2025.png">
+              </a>
+            </div>
 
-              <!-- 텍스트 영역 -->
-              <td style="padding:16px; width:65%; vertical-align:middle; font-size:16px; line-height:1.5;">
-                <a href="https://openaccess.thecvf.com/content/WACV2025/html/Jung_CAMEL_Confidence-Aware_Multi-Task_Ensemble_Learning_with_Spatial_Information_for_Retina_WACV_2025_paper.html">
-                  <span class="papertitle" style="font-size:18px; font-weight:bold;">
-                    CAMEL: Confidence-Aware Multi-Task Ensemble Learning with Spatial Information for Retina OCT Image Classification and Segmentation
-                  </span>
-                </a>
-                <br>
-                <strong>Juho Jung</strong>, Migyeong Yang, Hyunseon Won, Jiwon Kim, Jeong Mo Han, Joon Seo Hwang, Daniel Duck-Jin Hwang, Jinyoung Han
-                <br>
-                <em>WACV</em>, 2025
-                <br>
+            <div class="meta">
+              <a href="https://openaccess.thecvf.com/content/WACV2025/html/Jung_CAMEL_Confidence-Aware_Multi-Task_Ensemble_Learning_with_Spatial_Information_for_Retina_WACV_2025_paper.html">
+                <span class="papertitle">
+                  CAMEL: Confidence-Aware Multi-Task Ensemble Learning with Spatial Information for Retina OCT Image Classification and Segmentation
+                </span>
+              </a><br>
+              <strong>Juho Jung</strong>, Migyeong Yang, Hyunseon Won, Jiwon Kim, Jeong Mo Han, Joon Seo Hwang, Daniel Duck-Jin Hwang, Jinyoung Han<br>
+              <em>WACV</em>, 2025
+              <div class="links">
                 <a href="https://openaccess.thecvf.com/content/WACV2025/html/Jung_CAMEL_Confidence-Aware_Multi-Task_Ensemble_Learning_with_Spatial_Information_for_Retina_WACV_2025_paper.html">project page</a> /
                 <a href="data/paper/camel-wacv-2025.pdf">paper</a>
-                <p style="margin-top:8px;">
-                  A novel framework designed to reduce task-specific uncertainty in multi-task learning for retinal OCT image analysis through confidence-aware ensemble learning.
-                </p>
-              </td>
-            </tr>
+              </div>
+              <p style="margin-top:8px">
+                A novel framework designed to reduce task-specific uncertainty in multi-task learning for retinal OCT image analysis through confidence-aware ensemble learning.
+              </p>
+            </div>
+          </div>
 
-            <tr>
-              <!-- 이미지 영역 -->
-              <td style="padding:16px; width:35%; vertical-align:middle; text-align:center;">
-                <a href="data/paper/logo-hique-cikm-2025.png">
-                  <img style="width:100%; max-width:300px; height:auto; object-fit:contain;" 
-                       alt="paper logo" 
-                       src="data/paper/logo-hique-cikm-2025.png">
-                </a>
-              </td>
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-hique-cikm-2025.png">
+                <img alt="paper logo" src="data/paper/logo-hique-cikm-2025.png">
+              </a>
+            </div>
 
-              <!-- 텍스트 영역 -->
-              <td style="padding:16px; width:65%; vertical-align:middle; font-size:16px; line-height:1.5;">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3627673.3679797">
-                  <span class="papertitle" style="font-size:18px; font-weight:bold;">
-                    HiQuE: Hierarchical Question Embedding Network for Multimodal Depression Detection
-                  </span>
-                </a>
-                <br>
-                <strong>Juho Jung</strong>*, Seongjae Kang*, Dong Bok Lee, Dongseop Kim, Won Hwa Kim, Sunghoon Joo
-                <br>
-                <em>CIKM</em>, 2024 (Oral)
-                <br>
+            <div class="meta">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3627673.3679797">
+                <span class="papertitle">
+                  HiQuE: Hierarchical Question Embedding Network for Multimodal Depression Detection
+                </span>
+              </a><br>
+              <strong>Juho Jung</strong>*, Seongjae Kang*, Dong Bok Lee, Dongseop Kim, Won Hwa Kim, Sunghoon Joo<br>
+              <em>CIKM</em>, 2024 (Oral)
+              <div class="links">
                 <a href="https://dl.acm.org/doi/abs/10.1145/3627673.3679797">project page</a> /
                 <a href="data/paper/hique-cikm-2025.pdf">paper</a>
-                <p style="margin-top:8px;">
-                  A hierarchical question embedding network for multimodal depression detection using structured question-answer pairs.
-                </p>
-              </td>
-            </tr>
+              </div>
+              <p style="margin-top:8px">
+                A hierarchical question embedding network for multimodal depression detection using structured question-answer pairs.
+              </p>
+            </div>
+          </div>
 
-            <tr>
-              <!-- 이미지 영역 -->
-              <td style="padding:16px; width:35%; vertical-align:middle; text-align:center;">
-                <a href="data/paper/logo-s6-arxiv-2024.png">
-                  <img style="width:100%; max-width:300px; height:auto; object-fit:contain;" 
-                       alt="paper logo" 
-                       src="data/paper/logo-s6-arxiv-2024.png">
-                </a>
-              </td>
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-s6-arxiv-2024.png">
+                <img alt="paper logo" src="data/paper/logo-s6-arxiv-2024.png">
+              </a>
+            </div>
 
-              <!-- 텍스트 영역 -->
-              <td style="padding:16px; width:65%; vertical-align:middle; font-size:16px; line-height:1.5;">
-                <a href="https://arxiv.org/pdf/2407.13078">
-                  <span class="papertitle" style="font-size:18px; font-weight:bold;">
-                    Enhancing Temporal Action Localization: Advanced s6 Modeling with Recurrent Mechanism
-                  </span>
-                </a>
-                <br>
-                <strong>Juho Jung</strong>
-                <br>
-                <em>arXiv</em>, 2024
-                <br>
+            <div class="meta">
+              <a href="https://arxiv.org/pdf/2407.13078">
+                <span class="papertitle">
+                  Enhancing Temporal Action Localization: Advanced s6 Modeling with Recurrent Mechanism
+                </span>
+              </a><br>
+              <strong>Juho Jung</strong><br>
+              <em>arXiv</em>, 2024
+              <div class="links">
                 <a href="https://arxiv.org/pdf/2407.13078">arXiv</a> /
                 <a href="data/paper/s6-arxiv-2024.pdf">paper</a>
-                <p style="margin-top:8px;">
-                  Advanced s6 modeling with recurrent mechanism for enhanced temporal action localization.
-                </p>
-              </td>
-            </tr>
+              </div>
+              <p style="margin-top:8px">
+                Advanced s6 modeling with recurrent mechanism for enhanced temporal action localization.
+              </p>
+            </div>
+          </div>
 
-            <tr>
-              <!-- 이미지 영역 -->
-              <td style="padding:16px; width:35%; vertical-align:middle; text-align:center;">
-                <a href="data/paper/logo-amd_prediction-scientificreport-2024.png">
-                  <img style="width:100%; max-width:300px; height:auto; object-fit:contain;" 
-                       alt="paper logo" 
-                       src="data/paper/logo-amd_prediction-scientificreport-2024.png">
-                </a>
-              </td>
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-amd_prediction-scientificreport-2024.png">
+                <img alt="paper logo" src="data/paper/logo-amd_prediction-scientificreport-2024.png">
+              </a>
+            </div>
 
-              <!-- 텍스트 영역 -->
-              <td style="padding:16px; width:65%; vertical-align:middle; font-size:16px; line-height:1.5;">
-                <a href="data/paper/amd_prediction-scientificreport-2024.pdf">
-                  <span class="papertitle" style="font-size:18px; font-weight:bold;">
-                    Prediction of neovascular age-related macular degeneration recurrence using optical coherence tomography images with a deep neural network
-                  </span>
-                </a>
-                <br>
-                <strong>Juho Jung</strong>*, Jiwon Kim*, Joon Seo Hwang, Daniel Duck-Jin Hwang, Jinyoung Han
-                <br>
-                <em>Scientific Reports</em>, 2024
-                <br>
+            <div class="meta">
+              <a href="data/paper/amd_prediction-scientificreport-2024.pdf">
+                <span class="papertitle">
+                  Prediction of neovascular age-related macular degeneration recurrence using optical coherence tomography images with a deep neural network
+                </span>
+              </a><br>
+              <strong>Juho Jung</strong>*, Jiwon Kim*, Joon Seo Hwang, Daniel Duck-Jin Hwang, Jinyoung Han<br>
+              <em>Scientific Reports</em>, 2024
+              <div class="links">
                 <a href="data/paper/amd_prediction-scientificreport-2024.pdf">paper</a>
-                <p style="margin-top:8px;">
-                  Deep neural network-based prediction of neovascular age-related macular degeneration recurrence using OCT images.
-                </p>
-              </td>
-            </tr>
+              </div>
+              <p style="margin-top:8px">
+                Deep neural network-based prediction of neovascular age-related macular degeneration recurrence using OCT images.
+              </p>
+            </div>
+          </div>
 
-            <tr>
-              <!-- 이미지 영역 -->
-              <td style="padding:16px; width:35%; vertical-align:middle; text-align:center;">
-                <a href="data/paper/logo-safe-cikm-2024.png">
-                  <img style="width:100%; max-width:300px; height:auto; object-fit:contain;" 
-                       alt="paper logo" 
-                       src="data/paper/logo-safe-cikm-2024.png">
-                </a>
-              </td>
+          <div class="pub">
+            <div class="thumb">
+              <a href="data/paper/logo-safe-cikm-2024.png">
+                <img alt="paper logo" src="data/paper/logo-safe-cikm-2024.png">
+              </a>
+            </div>
 
-              <!-- 텍스트 영역 -->
-              <td style="padding:16px; width:65%; vertical-align:middle; font-size:16px; line-height:1.5;">
-                <a href="data/paper/safe-cikm-2024.pdf">
-                  <span class="papertitle" style="font-size:18px; font-weight:bold;">
-                    SAFE: Sequential Attentive Face Embedding with Contrastive Learning for Deepfake Video Detection
-                  </span>
-                </a>
-                <br>
-                <strong>Juho Jung</strong>*, Seongjae Kang*, Dong Bok Lee, Dongseop Kim, Won Hwa Kim, Sunghoon Joo
-                <br>
-                <em>CIKM</em>, 2024
-                <br>
+            <div class="meta">
+              <a href="data/paper/safe-cikm-2024.pdf">
+                <span class="papertitle">
+                  SAFE: Sequential Attentive Face Embedding with Contrastive Learning for Deepfake Video Detection
+                </span>
+              </a><br>
+              <strong>Juho Jung</strong>*, Seongjae Kang*, Dong Bok Lee, Dongseop Kim, Won Hwa Kim, Sunghoon Joo<br>
+              <em>CIKM</em>, 2024
+              <div class="links">
                 <a href="data/paper/safe-cikm-2024.pdf">paper</a> /
                 <a href="data/video/cikm_presentation_10.1145_3583780.3615279.mp4">video</a>
-                <p style="margin-top:8px;">
-                  Sequential attentive face embedding with contrastive learning for deepfake video detection.
-                </p>
-              </td>
-            </tr>
+              </div>
+              <p style="margin-top:8px">
+                Sequential attentive face embedding with contrastive learning for deepfake video detection.
+              </p>
+            </div>
+          </div>
 
-            <tr>
-              <td style="padding:8px;width:100%;vertical-align:middle">
-                <p>
-                  <em>For more publications, please visit my <a href="https://scholar.google.com/citations?hl=ko&user=YjI_sSAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> profile.</em>
-                </p>
-              </td>
-            </tr>
-            
-          </tbody></table>
+          <p style="margin-top:20px; text-align:center;">
+            <em>For more publications, please visit my <a href="https://scholar.google.com/citations?hl=ko&user=YjI_sSAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> profile.</em>
+          </p>
           
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
