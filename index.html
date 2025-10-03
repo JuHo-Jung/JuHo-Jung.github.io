@@ -7,9 +7,9 @@
 
     <meta name="author" content="Juho Jung">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/githubimg.png" type="image/png">
-    <link rel="icon" href="images/favicon/githubimg.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/favicon/githubimg.png">
+    <link rel="shortcut icon" href="images/favicon/githubimg.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="images/favicon/githubimg.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/favicon/githubimg.png" sizes="180x180">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
     <style>
@@ -30,6 +30,12 @@
       
       /* Juho Jung author name styling */
       .pub .meta strong u { font-size: 1.1em; }
+      
+      /* Favicon size styling */
+      link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"] {
+        width: 32px !important;
+        height: 32px !important;
+      }
       @media (max-width:700px){
         .pub{ flex-direction:column; align-items:flex-start; }
         .pub .thumb{ width:100%; max-width:100%; }
