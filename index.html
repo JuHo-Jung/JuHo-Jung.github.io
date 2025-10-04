@@ -23,6 +23,30 @@
       
       /* Juho Jung author name styling */
       .pub .meta strong u { font-size: 1.1em; }
+      
+      /* Mobile: keep desktop layout but scale to fit screen */
+      @media (max-width: 768px) {
+        /* Scale down the main container to fit mobile screen */
+        table[style*="max-width:800px"] {
+          max-width: 100% !important;
+          padding: 10px !important;
+        }
+        
+        /* Scale down paper thumbnails but keep horizontal layout */
+        .pub .thumb { 
+          flex: 0 0 180px !important; 
+          max-width: 180px !important; 
+        }
+        
+        /* Adjust text sizes for mobile readability */
+        .pub .papertitle { font-size: 16px !important; }
+        .pub .meta { font-size: 14px !important; }
+        
+        /* Make profile image smaller on mobile */
+        table[style*="width:37%"] img {
+          max-width: 150px !important;
+        }
+      }
     </style>
     
   </head>
