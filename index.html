@@ -7,9 +7,11 @@
 
     <meta name="author" content="Juho Jung">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/정주호_증명사진_001.jpeg" type="image/jpeg">
-    <link rel="icon" href="images/favicon/정주호_증명사진_001.jpeg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="images/favicon/정주호_증명사진_001.jpeg">
+    <link rel="shortcut icon" href="images/favicon/정주호_증명사진_001.jpeg?v=2" type="image/jpeg">
+    <link rel="icon" href="images/favicon/정주호_증명사진_001.jpeg?v=2" type="image/jpeg">
+    <link rel="apple-touch-icon" href="images/favicon/정주호_증명사진_001.jpeg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/정주호_증명사진_001.jpeg?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/정주호_증명사진_001.jpeg?v=2">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
     <style>
@@ -24,25 +26,60 @@
       /* Juho Jung author name styling */
       .pub .meta strong u { font-size: 1.1em; }
       
-      /* Mobile: keep desktop layout but scale to fit screen */
+      /* Mobile responsive improvements */
       @media (max-width: 768px) {
-        /* Scale down the main container to fit mobile screen */
+        /* Main container adjustments */
         table[style*="max-width:800px"] {
           max-width: 100% !important;
           padding: 10px !important;
         }
         
-        /* Scale down paper thumbnails but keep horizontal layout */
-        .pub .thumb { 
-          flex: 0 0 180px !important; 
-          max-width: 180px !important; 
+        /* Profile section: stack vertically on mobile */
+        table[style*="width:63%"] { 
+          width: 100% !important; 
+          display: block !important; 
+          padding: 10px !important;
+        }
+        table[style*="width:37%"] { 
+          width: 100% !important; 
+          display: block !important; 
+          text-align: center;
+          padding: 10px !important;
         }
         
-        /* Adjust text sizes for mobile readability */
+        /* Paper section: stack vertically on mobile */
+        .pub { 
+          flex-direction: column !important; 
+          align-items: flex-start !important; 
+          gap: 15px !important;
+        }
+        .pub .thumb { 
+          width: 100% !important; 
+          max-width: 100% !important; 
+          flex: none !important; 
+        }
+        
+        /* Image scaling for mobile */
+        img { 
+          max-width: 100% !important; 
+          height: auto !important; 
+        }
+        
+        /* Text size adjustments */
         .pub .papertitle { font-size: 16px !important; }
         .pub .meta { font-size: 14px !important; }
         
-        /* Make profile image smaller on mobile */
+        /* Profile image sizing */
+        table[style*="width:37%"] img {
+          max-width: 200px !important;
+          width: auto !important;
+        }
+      }
+      
+      /* Very small screens */
+      @media (max-width: 480px) {
+        .pub .papertitle { font-size: 14px !important; }
+        .pub .meta { font-size: 13px !important; }
         table[style*="width:37%"] img {
           max-width: 150px !important;
         }
